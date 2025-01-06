@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center bg-green-600 h-32 px-24">
+    <header className="flex justify-between items-center bg-green-600 h-32 px-24 shadow-lg">
       <h1 className="text-white font-bold text-4xl">Todo App</h1>
       <div className="form-container">
         <form>
