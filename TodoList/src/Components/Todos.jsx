@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa";
 
-const Todos = () => {
-  const [todos, setTodos] = useState([]);
-
+const Todos = ({ todos, setTodos }) => {
   useEffect(() => {
     axios
       .get("http://localhost:3000/todos")

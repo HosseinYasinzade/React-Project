@@ -1,6 +1,14 @@
-import React from "react";
+import { useState } from "react";
 
-const Search = () => {
+const Search = ({ todos, setTodos }) => {
+  const [value, setValue] = useState("");
+
+  const handleSearch = (e) => {
+    const searchValue = e.target.value;
+    setValue(searchValue);
+    setTodos(todos.filter((todo) => todo.title.includes(searchValue)));
+  };
+
   return (
     <section className="flex justify-center items-center h-28">
       <form className="w-full max-w-md">
@@ -8,6 +16,8 @@ const Search = () => {
           type="text"
           placeholder="Todo Title"
           className="border-none outline-none h-10 w-full md:w-1/2 lg:w-80 rounded-3xl px-4 mr-3"
+          value={value}
+          onChange={handleSearch}
         />
         <input
           type="submit"

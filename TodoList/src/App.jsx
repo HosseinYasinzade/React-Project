@@ -1,14 +1,15 @@
-import React from "react";
+import { useState } from "react";
 import Header from "./Components/Header";
 import Search from "./Components/Search";
 import Todos from "./Components/Todos";
 
 const App = () => {
+  const [todos, setTodos] = useState([]);
   return (
     <>
       <Header />
-      <Search />
-      <Todos />
+      <Search todos={todos} setTodos={setTodos} />
+      <Todos todos={todos} setTodos={setTodos} />
     </>
   );
 };
