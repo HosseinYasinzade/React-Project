@@ -39,7 +39,12 @@ const Todos = ({ todos, setTodos }) => {
             onClick={() => handleCompleted(todo.id)}
           >
             {todo.title}
-            <button onClick={() => handleDelete(todo.id)}>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDelete(todo.id);
+              }}
+            >
               <FaTrash />
             </button>
           </li>

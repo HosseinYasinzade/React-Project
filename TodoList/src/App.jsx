@@ -7,7 +7,7 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   return (
     <>
-      <Header />
+      <Header todos={todos} setTodos={setTodos} />
       <Search todos={todos} setTodos={setTodos} />
       <Todos todos={todos} setTodos={setTodos} />
     </>
