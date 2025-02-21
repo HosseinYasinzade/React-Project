@@ -1,11 +1,13 @@
 const Quote = ({ handleClick, error, data }) => {
   return (
-    <div>
-      <button onClick={handleClick}>Generate Quote</button>
+    <div className="container">
+      <button onClick={handleClick} className="btn">
+        Generate Quote
+      </button>
 
-      {error && <h2 style={{ color: "red" }}>{error}</h2>}
+      {error && <h2 className="errMsg">{error}</h2>}
 
-      {data && <h2>{data.content}</h2>}
+      {data && <h2 className="quote">{data.content}</h2>}
     </div>
   );
 };
