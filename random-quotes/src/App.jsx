@@ -1,5 +1,11 @@
+import Quote from "./components/Quote";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Quote />
+    </>
+  );
 }
 
 export default App;
