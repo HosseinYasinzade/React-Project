@@ -1,22 +1,4 @@
-import { useState } from "react";
-import axios from "axios";
-
-const Quote = () => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  const handleClick = () => {
-    axios
-      .get("https://api.quotable.io/random")
-      .then((response) => {
-        setData(response.data);
-        setError(null);
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
-  };
-
+const Quote = ({ handleClick, error, data }) => {
   return (
     <div>
       <button onClick={handleClick}>Generate Quote</button>
