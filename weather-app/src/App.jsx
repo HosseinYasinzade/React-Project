@@ -1,9 +1,12 @@
 import Weather from "./Components/Weather";
+import { WeatherProvider } from "../context/WeatherContext";
 
 function App() {
   return (
     <>
-      <Weather />
+      <WeatherProvider>
+        <Weather />
+      </WeatherProvider>
     </>
   );
 }
